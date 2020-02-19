@@ -1,0 +1,4 @@
+# Project exclude paths
+/single-module/target/
+.idea
+*.iml
