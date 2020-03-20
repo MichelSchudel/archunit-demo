@@ -2,3 +2,4 @@
 /single-module/target/
 .idea
 *.iml
+**/target/
