@@ -1,18 +1,14 @@
-package archunitdemo;
+package nl.craftsmen.archunitdemo;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.lang.syntax.ArchRuleDefinition;
 import com.tngtech.archunit.library.Architectures;
-import com.tngtech.archunit.library.GeneralCodingRules;
 
-import static archunitdemo.CustomRules.*;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
-import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
-import static com.tngtech.archunit.library.GeneralCodingRules.USE_JAVA_UTIL_LOGGING;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
+import static nl.craftsmen.archunitdemo.CustomRules.notHaveFieldsAnnotatedWithDeprecated;
 
 @AnalyzeClasses(packages = "nl.craftsmen.archunitdemo")
 public class ArchUnitJunit5Test {

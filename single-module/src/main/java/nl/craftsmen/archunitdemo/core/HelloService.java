@@ -1,6 +1,6 @@
 package nl.craftsmen.archunitdemo.core;
 
-import nl.craftsmen.archunitdemo.client.HelloClientImpl;
+import nl.craftsmen.archunitdemo.api.helloservice.HelloController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
