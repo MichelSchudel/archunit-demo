@@ -13,6 +13,6 @@ public class HelloController {
 
     @GetMapping("/echo")
     public HelloResponseModel echo() {
-        return new HelloResponseModel();
+        return new HelloResponseModel(helloService.echo());
     }
 }
