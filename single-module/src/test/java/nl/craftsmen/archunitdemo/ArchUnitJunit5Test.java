@@ -24,8 +24,12 @@ public class ArchUnitJunit5Test {
             .whereLayer("Client").mayNotBeAccessedByAnyLayer();
 
     @ArchTest
-    public static final ArchRule packageRule = noClasses().that().resideInAPackage("..core..")
-            .should().dependOnClassesThat().resideInAnyPackage("..api..", "..client..");
+    public static final ArchRule packageRule = noClasses()
+            .that()
+            .resideInAPackage("..core..")
+            .should()
+            .dependOnClassesThat()
+            .resideInAnyPackage("..api..", "..client..");
 
     @ArchTest
     public static final ArchRule onionModelRule = classes()
